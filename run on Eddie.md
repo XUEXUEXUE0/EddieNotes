@@ -8,6 +8,8 @@ Connect to the cluster using ssh from a terminal window (Linux and Mac OS) or us
 
 `$ ssh -X <YOUR UUN>@eddie.ecdf.ed.ac.uk`
 
+**Note** that access to the cluster is only available from the University network. External users should first connect to the University network using the VPN Service.
+
 ### Ask to work inside a node interactively
 
 `$qlogin -l h_vmem=8G`
@@ -15,6 +17,20 @@ Connect to the cluster using ssh from a terminal window (Linux and Mac OS) or us
 This means that I ask for 8GB RAM
 
 Much more info available from: https://www.wiki.ed.ac.uk/display/ResearchServices/Interactive+Sessions
+
+**Troubleshooting: fail to enter inside node**
+
+If you see:
+
+```
+Your job 2674903 ("QLOGIN") has been submitted
+waiting for interactive job to be scheduled ...timeout (5 s) expired while waiting on socket fd 9
+
+Your "qlogin" request could not be scheduled, try again later.
+```
+Eddie may be under maintenance. You could check Eddie's status here: https://alerts.is.ed.ac.uk/ 
+
+You have to wait the service back. It usually won't take too long.
 
 ### Change to group directory
 
